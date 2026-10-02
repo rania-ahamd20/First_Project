@@ -1,0 +1,88 @@
+:root {
+    --orange-bright: #ff9f1c;
+    --orange-soft: #ffbf69;
+    --teal-primary: #2ec4b6;
+    --teal-dark: #0f766e;
+    --teal-light: #cbf3f0;
+    --white: #ffffff;
+    --dark-grey: #212529;
+    --dark-grey-soft: #343a40;
+    --light-bg: #f8f9fa;
+
+    --food-bg: #fff4e6;
+    --food-text: #d9480f;
+    --food-border: #ffe066;
+
+    --transport-bg: #ccfbf1;
+    --transport-text: #0f766e;
+    --transport-border: #99f6e4;
+
+    --bills-bg: #fff9db;
+    --bills-text: #e67e22;
+    --bills-border: #ffe066;
+
+    --entertainment-bg: #e6fffa;
+    --entertainment-text: #0ca678;
+    --entertainment-border: #96f2d7;
+
+    --others-bg: #e9ecef;
+    --others-text: #212529;
+    --others-border: #ced4da;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+#loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1060;
+    color: var(--teal-primary);
+}
+
+.spinner-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 1050;
+}
+
+.btn-teal {
+    background-color: var(--teal-primary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-teal:hover {
+    background-color: #239b90;
+    color: var(--white);
+}
+
+.badge-food { background-color: var(--food-bg); color: var(--food-text); border: 1px solid var(--food-border); }
+.badge-transport { background-color: var(--transport-bg); color: var(--transport-text); border: 1px solid var(--transport-border); }
+.badge-bills { background-color: var(--bills-bg); color: var(--bills-text); border: 1px solid var(--bills-border); }
+.badge-entertainment { background-color: var(--entertainment-bg); color: var(--entertainment-text); border: 1px solid var(--entertainment-border); }
+.badge-others { background-color: var(--others-bg); color: var(--others-text); border: 1px solid var(--others-border); }
